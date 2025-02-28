@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digi Strokes - Gesture-Based Drawing App</title>
-
 </head>
 <body>
     <header>
@@ -41,16 +39,17 @@
 
 <h2>📂 Project Structure</h2>
         
-📦 Digi-Strokes/
-
- ┣ 📂 Resources/       # Images, icons, and other assets
- ┣ 📂 landingpages_js/ # JavaScript files (gesture tracking, drawing logic)
- ┣ 📂 landingpages_css/#CSS files
- ┣ 📜 index.html       # Main HTML file
- ┣ 📜 style.css        # Stylesheet
- ┣ 📜 script.js        # Main JavaScript file
- ┣ 📜 README.md        # Project documentation
-    
+<h3>📦 Digi-Strokes </h3>
+<ul>
+ <li>📂 Resources/       # Images, icons, and other assets</li>
+ <li>📂 landingpages_js/ # JavaScript files (gesture tracking, drawing logic)</li>
+ <li>📂 landingpages_css/#CSS files</li>
+ <li>📂 videos/Demos/</li>
+ <li>📜 index.html       # Main HTML file</li>
+ <li>📜 style.css        # Stylesheet</li>
+ <li>📜 script.js        # Main JavaScript file</li>
+ <li>📜 README.md        # Project documentation</li>
+</ul>
 </section>
 
 
@@ -59,7 +58,7 @@
 <section>
         <h2>🚀 Deployment</h2>
         <p>This project is hosted on GitHub Pages.</p>
-        <p>🔗 <strong>Live Demo:</strong> <a href="https://code-nico-code.github.io/Digi-Strokes/" target="_blank">Digi Strokes GitHub Pages</a></p>
+        <p>🔗 <strong>Live Demo:</strong> <a href="https://code-nico-code.github.io/Digi-Strokes/" target="blank">Digi Strokes GitHub Pages</a></p>
 </section>
 
 <section>
