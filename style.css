@@ -1,0 +1,990 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.nav-icon{
+    margin-left: 15px;
+}
+.brand-logo {
+  width: 50%;
+  height: 50%;
+  transition: all 0.5s ease-in;
+}
+
+.brand-logo:hover {
+  transform: scale(1.1);
+
+}
+
+.navbar {   
+    margin-top: 20px;
+    background: transparent ;
+    /* display:flex; */
+    align-items:center;
+    justify-content:space-evenly;
+    position:sticky;
+    z-index:1000 ;
+    top: 0;
+  }
+  .navbar.scrolled {
+    background-color: rgba(255, 252, 252, 0.582);
+}
+/* .navbar.scrolled .nav-link {
+  color: black; 
+} */
+
+/* .navbar.scrolled .menu-text {
+  color: black;
+} */
+ .nav-links{
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+ }
+  .nav-items a {
+    text-decoration: none;
+    margin-left: 20px;
+    margin-top: 20px;
+    text-transform: capitalize;
+    color:white;
+    opacity: 0.9;
+    font-weight: bold;
+    font-family: 'mr-eaves-xl-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    font-size: 1.2rem;
+    text-underline-offset: 4px;
+  }
+  .nav-link :hover{
+    color: #fff;
+    text-decoration: underline;
+  }
+  .icons{
+    display: flex;
+    gap: 20px;
+    color:darkblue;
+  }
+  .icons a {
+    color: darkblue;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .icons a :hover {
+    /* color: #fff; */
+    cursor: pointer;
+    transform: scale(1.2);
+  }
+  .menu-container {
+    position: relative;
+    display: flex;
+}
+
+/* Style for the plus (+) icon */
+.menu-icon {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    left:0;
+    margin-right: 5px;
+    margin-top: 4px;
+}
+.menu-text{
+    font-weight: bold;
+    font-family: 'mr-eaves-xl-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    font-size: 1.2rem;
+    color: darkblue;
+    text-transform: capitalize;
+    cursor: pointer;
+    text-underline-offset: 4px;
+    
+}
+.menu-icon :hover{
+    color: #fff;
+}
+.bar {
+    position: absolute;
+    background-color: darkblue;
+    border:1.5px solid darkblue;
+    width: 100%;
+    height: 4px;
+    top: 50%;
+    left: 0;
+    transform-origin: center;
+    transition: all 0.3s ease;
+   
+}
+/* Horizontal bar for the plus */
+.horizontal {
+    transform: translateY(-50%);
+}
+
+/* Vertical bar for the plus */
+.vertical {
+    transform: translateY(-50%) rotate(90deg);
+}
+.rotate {
+    transform: rotate(45deg);
+    transition: transform 0.3s ease; /* Smooth transition for rotation */
+}
+/* Side Panel Styles */
+.side-panel {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0,0.432);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.side-panel ul {
+    list-style: none;
+    padding: 0;
+}
+
+.side-panel ul li {
+    padding: 8px 32px;
+    text-align: left;
+}
+
+.side-panel ul li a {
+    padding: 8px 0;
+    text-decoration: none;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-panel ul li a:hover {
+    color: #f1f1f1;
+    text-decoration: underline;
+}
+
+.side-panel .close-button {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 30px;
+    font-weight: 800;
+    margin-left: 50px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: #3d3d3d;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+.side-panel .close-button:hover {
+    color: #080808;
+}
+.navbar {
+    transition: margin-right 0.5s;
+    /* Ensure you have a transition for smooth effect */
+}
+
+/* Body shift when the side panel is open */
+body.panel-open .navbar {
+    margin-right: 250px;
+    /* Shift navbar to the left when the side panel is open */
+}
+
+/* Active state when the side panel is visible */
+.side-panel.open {
+    width: 250px;
+    /* Adjust the width to match your side panel */
+}
+  .video-background {
+    position: fixed; /* Keep the video fixed as the background */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Ensure the video stays behind content */
+}
+
+.video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    object-fit:fill; /* Ensures the video covers the entire screen */
+}
+  
+#main{
+    position: relative;
+    overflow: hidden;
+    
+}
+.video-background{
+    position:absolute;
+}
+#page {
+    padding: 15%;
+    height: 88vh;
+    justify-content: center;
+
+
+}
+
+#page>h1 {
+    font-size: 50px;
+    font-family: fantasy;
+    text-align: center;
+    color: darkblue;
+
+
+}
+
+#page>h3 {
+    text-align: center;
+    color: black;
+}
+
+#page1 {
+    background-image: url("images/pexels-jessbaileydesign-743986.jpg");
+    background-size: cover;
+    /* Ensure the image covers the entire section */
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* Center the image */
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    /* Ensures proper stacking order */
+
+    opacity: 1;
+    /* Full visibility for background image */
+    padding: 30px;
+    overflow: hidden;
+}
+/* Styling for the main heading */
+.overviewcontent h1 {
+    font-size: 3rem;
+    color: #2c3e50;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Added text shadow for depth */
+}
+
+/* Styling for secondary heading */
+.overviewcontent h2 {
+    font-size: 2.2rem;
+    color: #34495e;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    font-style: italic;
+    opacity: 0.85;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Added text shadow for depth */
+}
+
+/* Styling for the third heading (h3) */
+.overviewcontent h3 {
+    font-size: 1.8rem;
+    color: #1d2d44;
+    margin: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #3498db; /* Underline for emphasis */
+    padding-bottom: 10px; /* Space below the heading */
+}
+
+/* Styling for paragraphs */
+.overviewcontent p {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 15px; /* Increased margin for better spacing */
+    line-height: 1.8;
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+/* Styling for the last paragraph */
+#last-para {
+    font-weight: 500;
+    font-style: italic;
+    color: #080269;
+    margin-top: 15px;
+    border-left: 4px solid #3498db;
+    border-radius: 3px;
+    padding-left: 15px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hover effect for the last paragraph */
+#last-para:hover {
+    background-color: #f0f4f8;
+    border-color: #1d2d44;
+}
+
+/* Hover effect for paragraphs */
+.overviewcontent p:hover {
+    color: #1d2d44;
+}
+
+/* Styling for content container */
+.overviewcontent {
+    background-color: rgba(255, 255, 255, 0.568);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow for depth */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    z-index: 1;
+    max-height: 80vh;
+    max-width: 1100px;
+}
+
+/* Scale and background color change on hover */
+.overviewcontent:hover {
+    transform: scale(1.02);
+    background-color: rgba(255, 255, 255, 0.863);
+}
+
+/* Main content styling */
+#page2 {
+    background-image: url("images/pexels-cup-of-couple-7302131.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    padding: 30px;
+    overflow: hidden;
+    display: flex; /* Center content */
+    justify-content: center; /* Center content */
+    align-items: center; /* Center content */
+}
+
+/* Adding a gradient overlay for better text visibility */
+#page2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    z-index: -1; /* Behind the content */
+}
+
+.Introduction-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+
+
+    margin: 50px auto;
+    max-width: 80%;
+}
+
+/* Styling for main heading */
+.Introduction-content h1 {
+    font-size: 3rem;
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.Introduction-content h1::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 4px;
+    background-color: #3498db;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+/* Styling for the secondary heading */
+.Introduction-content h2 {
+    font-size: 2rem;
+    color: #34495e;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 1.5px;
+    font-style: italic;
+    opacity: 0.85;
+}
+
+/* Styling for paragraphs */
+.Introduction-content p {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    line-height: 1.7;
+    text-align: justify;
+    font-weight: 400;
+    max-width: 800px;
+    padding: 0 15px;
+    transition: color 0.3s ease;
+}
+
+/* Background styling for the paragraph container */
+.Introduction-para {
+    background-color: rgba(255, 255, 255, 0.329);
+    padding: 25px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+}
+
+.Introduction-para:hover {
+    background-color: rgba(255, 255, 255, 0.452);
+    transform: scale(1.03);
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Hover effect for paragraphs */
+.Introduction-content p:hover {
+    color: #080269;
+}
+
+/* General Styles */
+#projects {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background-color: #f4f7f6;
+   
+  }
+  
+  .projects-title {
+    text-align: center;
+    font-size: 2.5em;
+    margin: 20px 0;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for the title */
+  }
+  #project1{
+    background-image: url("images/image1.jpeg");
+    background-size: cover;
+    /* Ensure the image covers the entire section */
+    background-repeat: no-repeat;
+    background-position: center center;
+
+  }
+  
+  #project2{
+    background-image: url("images/Untitled design.png");
+    background-size: cover;
+    /* Ensure the image covers the entire section */
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  #project3{
+    background-image: url("images/Untitled design2.png");
+    background-size: cover;
+    /* Ensure the image covers the entire section */
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  #project4{
+    background-image: url("images/hand.png");
+    background-size: cover;
+    /* Ensure the image covers the entire section */
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .projects-slider {
+    overflow: hidden; /* Hide overflow for a clean view */
+    position: relative;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+  }
+  
+  .projects-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth slide */
+    width: calc(100vw * 4); /* Adjust according to the number of projects */
+  }
+  
+  .project-card {
+    min-width: 100vw; /* Full viewport width for each card */
+    height: 100vh; /* Full viewport height for each card */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #f0f4f8, #e2e9f0);
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Soft shadow effect */ 
+    
+  }
+  
+  .project-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px; /* Round image corners */
+    opacity: 0.9;
+  }
+  
+  .project-content {
+    max-width: 750px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.315);
+  /* White background with transparency */
+  padding: 30px;
+  /* Padding for inner content spacing */
+  border-radius: 10px;
+  /* Rounded corners for a softer look */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  /* Soft shadow for depth */
+  
+  /* Maximum width for the content box */
+  margin: auto;
+  /* Center the content horizontally */
+  text-align: center;
+  /* Center text alignment */
+  transition:transform 0.3s ease;
+  }
+  .project-content:hover{
+    transform: translateY(-10px);
+  }
+  .project-title {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: #007BFF; /* Title color */
+    font-weight: bold;
+    
+  }
+  #projects h2{
+    font-size: 2.5em; /* Large title for emphasis */
+  font-family: 'Poppins', sans-serif; /* Modern, clean font */
+  color: rgb(10, 10, 92); /* Dark text color for contrast */
+  margin: 30px auto 15px; /* Increased space above the title, space below the title, auto for left and right margins */
+  padding: 20px; /* Space inside the card */
+  background-color: #f9f9f9; /* Light background color for the card */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+text-align: center; /* Center the text */
+  width: 80%; /* Set the width of the card to 80% of the parent element */
+  max-width: 600px; /* Optional: set a maximum width for larger screens */
+  font-weight: 700;
+  }
+
+  .project-description {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: rgb(1, 1, 87); /* Soft color for description */
+    margin-bottom: 70px;
+    line-height: 1.5;
+    font-weight: 600;
+  }
+  
+  .project-link {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 30px; /* Pill shape for the button */
+    transition: all 0.3s ease;
+    display: inline-block;
+    font-size: 1.1rem;
+  }
+  
+  .project-link:hover {
+    transform: scale(1.1) !important;
+    background-color: #0056b3;
+    
+  }
+  
+  /* Navigation Arrows */
+  .prev-arrow,
+  .next-arrow {
+    position: absolute;
+    top: 50%;
+    /* transform: scale(1.02); */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%; /* Circular buttons */
+    transition:all 0.3s ease;
+  }
+  
+  .prev-arrow {
+    left: 20px;
+  }
+  
+  .next-arrow {
+    right: 40px;
+  }
+  
+  .prev-arrow:hover,
+  .next-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1); /* Slight enlargement on hover */
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .project-title {
+      font-size: 1.8em; /* Slightly smaller on mobile */
+    }
+  
+    .project-description {
+      font-size: 1em;
+    }
+  
+    .project-link {
+      padding: 10px 20px;
+    }
+  }
+/* General Section Styling */
+#team {
+  padding: 80px 0;
+  background-color: #f4f7f6;
+  text-align: center;
+}
+
+.section-title {
+  margin-bottom: 50px;
+  font-size: 2.5em; /* Large title for emphasis */
+  font-family: 'Poppins', sans-serif; /* Modern, clean font */
+  color: rgb(10, 10, 92); /* Dark text color for contrast */
+  margin: 30px auto 15px; /* Increased space above the title, space below the title, auto for left and right margins */
+  padding: 20px; /* Space inside the card */
+  background-color: #f9f9f9; /* Light background color for the card */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+text-align: center; /* Center the text */
+  width: 80%; /* Set the width of the card to 80% of the parent element */
+  max-width: 600px; /* Optional: set a maximum width for larger screens */
+  font-weight: 700;
+}
+
+/* Team Carousel Styling */
+.team-carousel {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  justify-content: center;
+}
+
+.team-card {
+  display: none;
+  width: 80%;
+  height: 300px;
+  padding: 30px;
+  background: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  transition: transform 0.6s ease-in-out;
+}
+
+.team-card.active {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transform: scale(1.05);
+}
+
+.card-left {
+  flex: 1;
+  text-align: center;
+}
+
+.card-right {
+  flex: 2;
+  padding-left: 40px;
+  text-align: left;
+}
+
+.team-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.team-name {
+  font-size: 1.8rem;
+  color: #2c3e50;
+}
+
+.team-role {
+  font-size: 1.2rem;
+  color: #3498db;
+  margin-bottom: 10px;
+}
+
+.team-desc {
+  font-size: 1rem;
+  color: #7f8c8d;
+  margin-bottom: 15px;
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  color: #3498db;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #2c3e50;
+}
+
+/* Slider Controls */
+.slider-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.line-control {
+  display: inline-block;
+  width: 90px;
+  height: 10px;
+  background-color: #bdc3c7;
+  margin: 0 10px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.line-control.active {
+  background-color: #3498db;
+}
+
+* FAQ Section General Styling */
+#faq {
+  background-color: #f4f7f6;
+  padding: 50px 20px;
+  margin-top: 50px;
+  
+}
+
+.faq-title {
+  
+  margin-bottom: 100px;
+  margin-top: 150px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+
+  font-size: 2.5em; /* Large title for emphasis */
+  font-family: 'Poppins', sans-serif; /* Modern, clean font */
+  color: rgb(10, 10, 92); /* Dark text color for contrast */
+  margin: 30px auto 15px; /* Increased space above the title, space below the title, auto for left and right margins */
+  padding: 20px; /* Space inside the card */
+  background-color: #f4f7f6; /* Light background color for the card */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+text-align: center; /* Center the text */
+  width: 80%; /* Set the width of the card to 80% of the parent element */
+  max-width: 600px; /* Optional: set a maximum width for larger screens */
+  font-weight: 700;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 10px;
+  margin-bottom: 100px;
+}
+
+/* FAQ Item Styling */
+.faq-item {
+  background-color: white;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: max-height 0.6s ease-in-out;
+  max-height: 65px;
+  /* Collapsed height */
+}
+
+.faq-item.active {
+  max-height: 300px;
+  /* Expanded height */
+}
+
+
+
+.faq-question {
+  background-color: #023872;
+  color: white;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 10px 10px 0 0;
+
+  overflow: hidden;
+}
+
+.faq-question h3 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.faq-toggle {
+  font-size: 1.5em;
+  transition: transform 0.3s;
+}
+
+.faq-item.active .faq-toggle {
+  transform: rotate(45deg);
+  /* Rotate "+" to "x" */
+}
+
+.faq-answer {
+  padding: 20px;
+
+  background-color: #f9fafb;
+  overflow: hidden;
+  color: #555;
+  font-size: 1.2em;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.4s ease-out, opacity 0.4s ease-out;
+
+}
+
+.faq-item.active .faq-answer {
+
+  max-height: 200px;
+  /* Adjust this according to your content */
+  opacity: 1;
+  transition: max-height 0.4s ease-in, opacity 0.4s ease-in;
+}
+
+.faq-item.close .faq-answer {
+
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.4s ease-in, opacity 0.4s ease-out;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .faq-title {
+    font-size: 2.2em;
+  }
+
+  .faq-question h3 {
+    font-size: 1.2em;
+  }
+
+  .faq-answer {
+    font-size: 1em;
+  }
+}
+
+
+.footer {
+  background-color: #2c3e50;
+  /* Dark background for contrast */
+  color: #ecf0f1;
+  /* Light text color for readability */
+  padding: 20px 0;
+  /* Vertical padding for spacing */
+  text-align: center;
+  /* Centered text */
+  position: relative;
+  /* For positioning child elements */
+  overflow: hidden;
+  /* Hide overflowing content */
+}
+
+.footer-content {
+  margin-bottom: 15px;
+  /* Spacing between content and social icons */
+}
+
+.footer-links {
+  list-style: none;
+  /* Remove bullet points */
+  padding: 0;
+  /* Remove padding */
+  margin: 10px 0;
+  /* Spacing for links */
+}
+
+.footer-links li {
+  display: inline;
+  /* Inline display for links */
+  margin: 0 15px;
+  /* Spacing between links */
+}
+
+.footer-links a {
+  color: #ecf0f1;
+  /* Link color */
+  text-decoration: none;
+  /* Remove underline */
+  transition: color 0.3s ease;
+  /* Smooth color transition */
+}
+
+.footer-links a:hover {
+  color: #3498db;
+  /* Change color on hover */
+}
+
+.footer-socials {
+  margin-top: 10px;
+  /* Space above social icons */
+}
+
+.social-icon {
+  color: #ecf0f1;
+  /* Icon color */
+  font-size: 1.5rem;
+  /* Icon size */
+  margin: 0 10px;
+  /* Spacing between icons */
+  transition: transform 0.3s;
+  /* Smooth scaling effect */
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  /* Scale up on hover */
+}

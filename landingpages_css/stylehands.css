@@ -1,0 +1,475 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+
+.video-background {
+    position: fixed; /* Keep the video fixed as the background */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Ensure the video stays behind content */
+}
+
+.video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    object-fit:fill; /* Ensures the video covers the entire screen */
+}
+  
+
+.video-background{
+    position:absolute;
+}
+/* Hero Section */
+.hero-section {
+    /* background-image: url('canvas-bg.jpg'); */
+    /* Add your background image here */
+    background-size: cover;
+    background-position: center;
+    height: 88vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: darkblue;
+}
+
+.hero-content {
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 60px;
+    font-weight: bold;
+    text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.7);
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+}
+
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.hero-description {
+    font-size: 30px;
+    margin-top: 10px;
+    
+}
+
+
+/* General Section Styles */
+.features-section {
+    text-align: center;
+    margin: 50px 0;
+    padding: 50px 20px;
+    background-color: #f7f9fc;
+    /* Light background to highlight the section */
+    border-radius: 10px;
+    /* Soft rounded corners */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    /* Light shadow for a floating effect */
+}
+
+.features-section h1 {
+    font-size: 2.5em; /* Large title for emphasis */
+    font-family: 'Poppins', sans-serif; /* Modern, clean font */
+    color: rgb(10, 10, 92); /* Dark text color for contrast */
+    margin: 30px auto 15px; /* Increased space above the title, space below the title, auto for left and right margins */
+    padding: 20px; /* Space inside the card */
+    background-color: #f4f7f6; /* Light background color for the card */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center the text */
+    width: 80%; /* Set the width of the card to 80% of the parent element */
+    max-width: 600px; /* Optional: set a maximum width for larger screens */
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.features-section h1 ::after {
+    content: '';
+    width: 100px;
+    height: 4px;
+    background-color: #FF6F61;
+    /* Accent color for underline */
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+/* Feature List Styles */
+.features-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.feature-item {
+    text-align: center;
+}
+
+.feature-item {
+    text-align: center;
+}
+
+.feature-icon {
+    display: inline-block;
+    font-size: 3em;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    color: #333;
+    margin-bottom: 10px;
+    position: relative;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+    animation: smooth-bounce 1.5s infinite ease-in-out;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.feature-icon:hover {
+    transform: translateY(-10px) scale(1.05);
+    /* Slight lift and scale effect on hover */
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2);
+    /* Stronger shadow on hover */
+}
+
+/* Bouncing Wave Animation */
+@keyframes smooth-bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+        /* Start and end at the original position */
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+        /* Normal shadow */
+    }
+
+    40% {
+        transform: translateY(-30px);
+        /* Peak of the bounce */
+        box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.25);
+        /* Larger shadow when "up" */
+    }
+
+    60% {
+        transform: translateY(-15px);
+        /* Mid-point of bounce */
+        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+        /* Medium shadow */
+    }
+}
+
+/* Adding delay for wave effect */
+.features-list .feature-item:nth-child(1) .feature-icon {
+    animation-delay: 0s;
+}
+
+.features-list .feature-item:nth-child(2) .feature-icon {
+    animation-delay: 0.2s;
+}
+
+.features-list .feature-item:nth-child(3) .feature-icon {
+    animation-delay: 0.4s;
+}
+
+.features-list .feature-item:nth-child(4) .feature-icon {
+    animation-delay: 0.6s;
+}
+
+/* Feature Description Styles */
+.feature-description {
+    font-size: 1.2em;
+    color: #555;
+    font-family: 'Roboto', sans-serif;
+    /* Clean, modern font */
+    max-width: 150px;
+    /* Limit the width for better text wrapping */
+    margin: 0 auto;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover effect for descriptions */
+.feature-item:hover .feature-description {
+    color: #FF6F61;
+    /* Accent color on hover */
+}
+
+
+/* How to Use Section */
+.how-to-use-section {
+    padding: 60px 20px;
+    background-color: #f4f7f6;
+    /* Soft light background */
+    text-align: center;
+    border-radius: 10px;
+    margin: 50px 0;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    font-size: 2.5em;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 40px;
+    color: rgb(10, 10, 92);
+    letter-spacing: 1.5px;
+}
+
+/* Ordered List Styling */
+.how-to-use-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Individual Step Styling */
+.how-to-use-step {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1100px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Step Hover Effect */
+.how-to-use-step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Step Number Styling */
+.step-number {
+    font-size: 2em;
+    color: #fff;
+    background-color: #0056b3;
+    /* Primary color */
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Step Content Styling */
+.step-content {
+    text-align: left;
+}
+
+/* Step Title Styling */
+.step-title {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Step Description Styling */
+.step-description {
+    font-size: 1em;
+    color: #666;
+    margin-top: 5px;
+    line-height: 1.5em;
+}
+
+/* Let's Get Started Section */
+.get-started-section {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #e0f7fa, #ffffff); /* Gradient background for a fresh look */
+    color: #333; /* Darker text for readability */
+    margin-top: 50px;
+    border-radius: 12px; /* Slightly larger border radius */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Softer shadow for depth */
+    position: relative; /* Positioning for pseudo-elements */
+}
+
+/* Title Styling */
+.get-started-title {
+    font-weight: 700;
+    font-size: 2.5em; /* Increased size for emphasis */
+    font-family: 'Poppins', sans-serif; /* Clean, modern font */
+    margin-bottom: 15px;
+    text-transform: uppercase; /* Uppercase for title */
+    letter-spacing: 2px; /* Increased letter spacing */
+    color: rgb(10, 10, 92); /* Bright blue accent color */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow for depth */
+}
+
+/* Description Styling */
+.get-started-description {
+    font-size: 1.4em; /* Slightly larger description */
+    font-family: 'Roboto', sans-serif; /* Complementary font */
+    margin-bottom: 30px;
+    color: rgb(13, 13, 119); /* Slightly muted gray for text */
+    line-height: 1.5; /* Improved line height for readability */
+}
+
+/* Button Styling */
+.get-started-btn {
+    font-size: 1.3em; /* Button text size */
+    background: linear-gradient(90deg, #004d9e, #003166); /* Gradient background for button */
+    color: #fff; /* White text for contrast */
+    padding: 12px 35px; /* Padding for button */
+    border: none; /* No border */
+    border-radius: 50px; /* Rounded edges for a trendy look */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s ease; /* Smooth transition */
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3); /* Soft shadow for lift effect */
+    position: relative; /* Positioning for after pseudo-element */
+    overflow: hidden; /* To prevent overflow of after pseudo-element */
+}
+
+/* Button Hover Effect */
+.get-started-btn:hover {
+    background: linear-gradient(90deg, #003166, #004090); /* Darker gradient on hover */
+    transform: translateY(-3px); /* Lift effect */
+    box-shadow: 0 10px 20px rgba(0, 66, 136, 0.4); /* Enhanced shadow on hover */
+}
+
+/* Button After Element for Hover Effect */
+.get-started-btn::after {
+    content: '';
+    position: absolute; /* Absolute positioning for after element */
+    top: 0;
+    left: 50%; /* Center horizontally */
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.322); /* Light overlay for hover effect */
+    transform: translateX(-50%) translateY(-100%); /* Position it above */
+    transition: transform 0.3s ease; /* Smooth transition */
+    z-index: 0; /* Behind the text */
+}
+
+.get-started-btn:hover::after {
+    transform: translateX(-50%) translateY(0); /* Move down on hover */
+}
+
+/* Output Text Styling */
+.output-text {
+    margin-top: 20px; /* Margin above the output text */
+    font-size: 1.1em; /* Font size for output text */
+    font-family: 'Roboto', sans-serif; /* Complementary font */
+    color: rgb(10, 10, 92); /* Bright blue for output text */
+    padding: 10px; /* Padding for output text */
+    border: 2px solid rgb(5, 5, 51); /* Border around output text */
+    border-radius: 10px; /* Rounded corners */
+    background-color: rgba(158, 205, 255, 0.452); /* Light blue background */
+    max-height: 200px;
+    max-width: 600px;
+    width: 80%;
+    text-align: center;
+    margin: 30px auto 15px;
+}
+
+
+
+.footer {
+    background-color: #2c3e50;
+    /* Dark background for contrast */
+    color: #ecf0f1;
+    /* Light text color for readability */
+    padding: 20px 0;
+    /* Vertical padding for spacing */
+    text-align: center;
+    /* Centered text */
+    position: relative;
+    /* For positioning child elements */
+    overflow: hidden;
+    /* Hide overflowing content */
+}
+
+.footer-content {
+    margin-bottom: 15px;
+    /* Spacing between content and social icons */
+}
+
+.footer-links {
+    list-style: none;
+    /* Remove bullet points */
+    padding: 0;
+    /* Remove padding */
+    margin: 10px 0;
+    /* Spacing for links */
+}
+
+.footer-links li {
+    display: inline;
+    /* Inline display for links */
+    margin: 0 15px;
+    /* Spacing between links */
+}
+
+.footer-links a {
+    color: #ecf0f1;
+    /* Link color */
+    text-decoration: none;
+    /* Remove underline */
+    transition: color 0.3s ease;
+    /* Smooth color transition */
+}
+
+.footer-links a:hover {
+    color: #3498db;
+    /* Change color on hover */
+}
+
+.footer-socials {
+    margin-top: 10px;
+    /* Space above social icons */
+}
+
+.social-icon {
+    color: #ecf0f1;
+    /* Icon color */
+    font-size: 1.5rem;
+    /* Icon size */
+    margin: 0 10px;
+    /* Spacing between icons */
+    transition: transform 0.3s;
+    /* Smooth scaling effect */
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    /* Scale up on hover */
+}

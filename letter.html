@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shapes</title>
+    <link rel="icon" type="image/png" href="icon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="landingpages_css\styleletter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="navbar" id="navbar">
+        <div class="nav-icon">
+            <a href="index.html">
+            <img src="images/DS-removebg-preview.png" class="brand-logo" alt="logoimage" />
+        </a>
+        </div>
+
+        <div class="links">
+            <ul class="nav-links">
+                            <li class="nav-items"><a class="nav-link" href="#home" style="color: darkblue; text-decoration: none;"
+                        onmouseover="this.style.color='rgb(2, 2, 99)'; this.style.textDecoration='underline';"
+                        onmouseout="this.style.color='darkblue'; this.style.textDecoration='none';">HOME</a>
+                </li>
+                <li class="nav-items"><a class="nav-link" href="#features"
+                        style="color: darkblue; text-decoration: none;"
+                        onmouseover="this.style.color='rgb(2, 2, 99)'; this.style.textDecoration='underline';"
+                        onmouseout="this.style.color='darkblue'; this.style.textDecoration='none';">FEATURES</a></li>
+                <li class="nav-items"><a class="nav-link" href="#how-to-use"
+                        style="color: darkblue; text-decoration: none;"
+                        onmouseover="this.style.color='rgb(2, 2, 99)'; this.style.textDecoration='underline';"
+                        onmouseout="this.style.color='darkblue'; this.style.textDecoration='none';">HOW TO USE</a></li>
+                <li class="nav-items"><a class="nav-link" href="#demo" 
+                        style="color: darkblue; text-decoration: none;"
+                        onmouseover="this.style.color='rgb(2, 2, 99)'; this.style.textDecoration='underline';"
+                        onmouseout="this.style.color='darkblue'; this.style.textDecoration='none';">DEMO</a></li>
+            </ul>
+        </div>
+        <div class="icons">
+            <a href="canvas.html"><i class="fas fa-paint-brush"></i></a>
+            <a href="shapes.html"><i class="fas fa-shapes"></i></a>
+            <a href="hands.html"><i class="fas fa-hand-rock"></i></a>
+            <a href="letter.html"><i class="fas fa-font"></i></a>
+        </div>
+        <div class="menu-container">
+            <div class="menu-icon" id="menu-icon">
+                <div class="bar horizontal"></div>
+                <div class="bar vertical"></div>
+            </div>
+            <div class="menu-text" id="menu-text" style="color: darkblue; text-decoration: none;"
+                onmouseover="this.style.color='rgb(2, 2, 99)'; this.style.textDecoration='underline';"
+                onmouseout="this.style.color='darkblue'; this.style.textDecoration='none';">MENU</div>
+            <div class="side-panel" id="sidePanel">
+                <button class="close-button" onclick="closeNav()">x</button>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="canvas.html">Artistry Canvas</a></li>
+                    <li><a href="shapes.html">Shape Master</a></li>
+                    <li><a href="letter.html">Letter Artistry</a></li>
+                    <li><a href="hands.html">Clash of Hands</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+   <!-- Hero Section -->
+<section class="hero-section" id="home">
+    <div class="hero-content">
+        <div class="video-background">
+            <video autoplay muted loop>
+                <source src="videos\hero_letter.mp4" type="video/mp4">
+                <source src="background-video.webm" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <h1 class="hero-title">Letter Artistry </h1>
+        <p class="hero-description">Letter Artistry is an AI-driven project that enables users to draw letters<br> on a canvas using hand gesture detection.</p>
+    </div>
+</section>
+   <!-- Features Section -->
+<section class="features-section" id="features">
+    <h1>Features</h1>
+    <ul class="features-list">
+        <li class="feature-item">
+            <span class="feature-icon">✋</span>
+            <p class="feature-description">Hand Gesture Detection</p>
+        </li>
+        <li class="feature-item">
+            <span class="feature-icon">🔤</span>
+            <p class="feature-description">Alphabet Recognition</p>
+        </li>
+<li class="feature-item">
+            <span class="feature-icon">🎨</span>
+            <p class="feature-description">Color Palette</p>
+        </li>
+        <li class="feature-item">
+            <span class="feature-icon">⚡</span>
+            <p class="feature-description">Real-Time Letter Recognition</p>
+        </li>
+    </ul>
+</section>
+  <!-- How to Use Section -->
+  <section class="how-to-use-section" id="how-to-use">
+    <h2 class="section-title">HOW TO USE</h2>
+    <ol class="how-to-use-list">
+        <li class="how-to-use-step">
+            <span class="step-number">1</span>
+            <div class="step-content">
+                <p class="step-title"> Activate Hand Detection</p>
+                <p class="step-description">Make sure your camera is active to track your hand movements.</p>
+</div> </li>
+<li class="how-to-use-step">
+            <span class="step-number">2</span>
+            <div class="step-content">
+                <p class="step-title">Draw a Letter</p>
+                <p class="step-description">Use your index finger to draw a letter on the canvas.</p>
+            </div>
+        </li>
+<li class="how-to-use-step">
+            <span class="step-number">3</span>
+            <div class="step-content">
+                <p class="step-title">Recognize the Letter</p>
+                <p class="step-description">After drawing the letter, press the "Recognize" button to identify and detect the written word.</p>
+            </div>
+        </li>
+<li class="how-to-use-step">
+            <span class="step-number">4</span>
+            <div class="step-content">
+                <p class="step-title">Clear the Canvas</p>
+                <p class="step-description">Click the "Clear" button to start over if needed.
+                </p>
+            </div>
+        </li>
+    </ol>
+</section>
+<!-- This will show the project output -->
+    <section class="get-started-section" id="demo">
+        <h2 class="get-started-title">Ready to Start?</h2>
+        <p class="get-started-description">Click the button below to run the project and see it in action!</p>
+        <button class="get-started-btn" id="runProject4Btn">Let's Get Started</button>
+        <p id="output" class="output-text"></p> 
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Digi-Strokes. All Rights Reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-socials">
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </footer>
+    <script src="landingpages_js\scriptletter.js"></script>
+</body>
+
+
+</html>
