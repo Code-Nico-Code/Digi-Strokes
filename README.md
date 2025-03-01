@@ -66,22 +66,39 @@
 <h2>📽️ Project Demo</h2>
 <h3>1️⃣ Artistry Canvas 🎨</h3>
         <p>Gesture-based freehand drawing with various brush styles.</p>
-        <p>🎥 <strong>Demo Video:</strong> <a href="https://github.com/Code-Nico-Code/Digi-Strokes/blob/main/videos/Demos/Air-Canvas-Demo.mp4" target="_blank">Watch Now</a></p>
+        <p>🎥 <strong>Demo Video:</p>
+
+https://github.com/user-attachments/assets/5de25d7c-0ee3-4acc-a710-31e6f61025b8
+
+
 
 <h3>2️⃣ Shapes Master 🔺🔵</h3>
         <p>Draw predefined shapes using hand gestures.</p>
-        <p>🎥 <strong>Demo Video:</strong> <a href="https://github.com/Code-Nico-Code/Digi-Strokes/blob/main/videos/Demos/Shapes-Master-Demo.mp4" target="_blank">Watch Now</a></p>
+        <p>🎥 <strong>Demo Video:</p>
+        
+
+https://github.com/user-attachments/assets/5e0f1fd4-4be5-48b1-a58d-a2ff5a0a42de
+
+
 
  <h3>3️⃣ Letter Artistry ✍️</h3>
 
 <p>Recognizing gestures to draw letters and numbers.</p>
-        <p>🎥 <strong>Demo Video:</strong> <a href="https://github.com/Code-Nico-Code/Digi-Strokes/blob/main/videos/Demos/Letter-Artistry-Demo.mp4" target="_blank">Watch Now</a></p>
+        <p>🎥 <strong>Demo Video:</p>
+
+
+https://github.com/user-attachments/assets/ce20f5bc-dbc3-4959-bde4-4fdf2dc651ee
+
 
 
 <h3>4️⃣ Clash of Hands ✊✋✌️</h3>
         <p>Fun interactive game using hand gestures.</p>
-        <p>🎥 <strong>Demo Video:</strong> <a href="https://github.com/Code-Nico-Code/Digi-Strokes/blob/main/videos/Demos/Shapes-Master-Demo.mp4" target="_blank">Watch Now</a></p>
-    </section>
+        <p>🎥 <strong>Demo Video:</p>
+
+
+https://github.com/user-attachments/assets/4c3b69a3-b9c8-4cb6-bab1-e5c82d099d57
+            
+ </section>
 <section>
         <h2>👨‍💻 Contributors & Work Done</h2>
         <table border="1">
